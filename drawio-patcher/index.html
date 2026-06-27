@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flowchart Maker &amp; Online Diagram Software</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Description" content="draw.io is free online diagram software for making flowcharts, process diagrams, org charts, UML, ER and network diagrams">
+    <meta name="Keywords" content="drawio, diagram, online, flow chart, flowchart maker, uml, erd">
+    <meta itemprop="name" content="draw.io - free flowchart maker and diagrams online">
+	<meta itemprop="description" content="draw.io is a free online diagramming application and flowchart maker . You can use it to create UML, entity relationship,
+		org charts, BPMN and BPM, database schema and networks. Also possible are telecommunication network, workflow, flowcharts, maps overlays and GIS, electronic 
+		circuit and social network diagrams.">
+	<meta itemprop="image" content="https://lh4.googleusercontent.com/-cLKEldMbT_E/Tx8qXDuw6eI/AAAAAAAAAAs/Ke0pnlk8Gpg/w500-h344-k/BPMN%2Bdiagram%2Brc2f.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="msapplication-config" content="images/browserconfig.xml">
+    <meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#d89000">
+    <link rel="canonical" href="https://app.diagrams.net">
+	<link rel="manifest" href="images/manifest.json">
+	<link rel="icon" href="favicon.ico" sizes="any">
+	<link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
+	<link rel="stylesheet" media="(forced-colors: active)" href="styles/high-contrast.css" id="high-contrast-stylesheet">
+	<script src="js/bootstrap.js"></script>
+	<style type="text/css">
+		.geBlock {
+			z-index:-3;
+			margin:100px;
+			margin-top:40px;
+			margin-bottom:30px;
+			padding:20px;
+			text-align:center;
+			min-width:50%;
+		}
+		.geBlock h1, .geBlock h2 {
+			margin-top:0px;
+			padding-top:0px;
+		}
+	</style>
+</head>
+<body class="geEditor geClassic">
+<div id="geInfo" style="position:absolute; inset:0; display:flex; justify-content:center; align-items:center; z-index:9999; font-family:sans-serif; transition: opacity 0.25s ease-out;">
+	<div style="text-align:center;">
+		<img src="images/drawlogo256.png" style="width:80px; height:80px; margin-bottom:20px; animation: drawiq-pulse 2s infinite ease-in-out;" />
+		<div id="geInfoText" style="font-size:14px; font-weight:550; letter-spacing:1px;">加载中...</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	// 🚀 0ms 自适应深浅色：优先读取 .drawio-config 里的用户自定义 darkMode 状态，其次跟随系统
+	(function() {
+		var isDark = false;
+		try {
+			// 读取 draw.io 全局主配置键 .drawio-config
+			var configRaw = localStorage.getItem('.drawio-config');
+			var hasExplicitPreference = false;
+			
+			if (configRaw) {
+				var config = JSON.parse(configRaw);
+				if (config.darkMode === true) {
+					isDark = true;
+					hasExplicitPreference = true;
+				} else if (config.darkMode === false) {
+					isDark = false;
+					hasExplicitPreference = true;
+				}
+			}
+			
+			// 如果用户未曾在软件里显式设置（如 darkMode === 'auto' 或配置不存在），则跟随操作系统的 prefers-color-scheme
+			if (!hasExplicitPreference) {
+				if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					isDark = true;
+				}
+			}
+		} catch (e) {}
+
+		// 动态应用颜色
+		var geInfo = document.getElementById('geInfo');
+		var geInfoText = document.getElementById('geInfoText');
+		if (geInfo && geInfoText) {
+			geInfo.style.backgroundColor = isDark ? '#202020' : '#f5f5f5';
+			geInfoText.style.color = isDark ? '#aaaaaa' : '#666666';
+		}
+	})();
+</script>
+
+<style>
+	@keyframes drawiq-pulse {
+		0% { transform: scale(0.95); opacity: 0.8; }
+		50% { transform: scale(1.02); opacity: 1; }
+		100% { transform: scale(0.95); opacity: 0.8; }
+	}
+</style>
+<script src="js/main.js"></script>
+</body>
+</html>
