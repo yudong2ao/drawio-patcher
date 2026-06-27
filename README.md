@@ -37,9 +37,3 @@
    * 若未来需要还原官方原生版本，只需在 draw.io 安装的 `resources/` 目录下（通常为 `C:\Program Files\draw.io\resources\`）将 `app.asar.bak` 重命名回 `app.asar` 覆盖即可。
 
 ---
-
-## 📅 版本更新日志
-
-### v2.1.0 
-* **自适应修正**：自运行 Loading 及 Preload 双重防线重构，打通 `.drawio-config` 里的 `darkMode` 属性，彻底消除了 Loading 界面被系统深浅偏好单纯劫持的 Bug，完美适配了软件内置的深浅色切换设置。
-* **冷启动加速**：主进程移除了对重型 `nativeTheme` 同步 API 的加载，杜绝了初始化阶段由于调用操作系统原生主题属性引起的阻塞，冷启动性能完全回归极致。
